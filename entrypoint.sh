@@ -1,6 +1,7 @@
 #!/bin/sh
 mkdir -p /etc/ppp/
 mkdir -p /etc/ppp/peers/
+mknod /dev/ppp c 108 0
 
 sysctl -w net.ipv4.conf.all.forwarding=1
 sysctl -w net.ipv6.conf.all.forwarding=1
